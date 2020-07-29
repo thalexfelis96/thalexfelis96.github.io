@@ -117,8 +117,17 @@
               "devServerTarget": "my-project:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/my-project",
+            "netlifyToken": "y",
+            "siteId": ""
+          }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "my-project"
 }

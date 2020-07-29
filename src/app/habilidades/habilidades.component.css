@@ -4,7 +4,7 @@
 }
 .skills-title::before {
   content: "ROLES";
-  opacity: 10%;
+  opacity: 0.1;
   font-size: 100px;
   position: absolute;
   z-index: 1;
