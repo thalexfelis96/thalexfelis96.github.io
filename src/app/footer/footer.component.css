@@ -1,0 +1,40 @@
+.wrapper {
+  background-color: black;
+  bottom: 0;
+  z-index: 2;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.social-media-links {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+.social-media-list {
+  padding-left: 30px;
+}
+.social-media-image {
+  max-width: 35px;
+  min-width: 35px;
+  max-height: 35px;
+  min-height: 35px;
+}
+
+.logo {
+  max-width: 50px;
+  min-width: 50px;
+  max-height: 50px;
+  min-height: 50px;
+}
+.contact {
+  font-size: 18px;
+  padding-right: 20px;
+}
+.link-footer {
+  text-decoration: none;
+}

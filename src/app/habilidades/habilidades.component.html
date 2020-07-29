@@ -1,0 +1,38 @@
+<article class="wrapper">
+  <h1 class="skills-title">Habilidades Principais</h1>
+  <div>
+    <form class="lanes" name="role">
+      <button
+        class="lane-selector"
+        type="button"
+        (click)="roleSelected('atirador', 'adc')"
+        id="adc"
+        [ngClass]="{ 'lane-selected': roleId == 'adc' }"
+      >
+        <label for="adc">Atirador</label>
+      </button>
+      <button
+        class="lane-selector"
+        type="button"
+        (click)="roleSelected('meio', 'mid')"
+        id="mid"
+        [ngClass]="{ 'lane-selected': roleId == 'mid' }"
+      >
+        <label for="mid">Meio</label>
+      </button>
+      <button
+        class="lane-selector"
+        type="button"
+        (click)="roleSelected('selva', 'jungle')"
+        id="jungle"
+        [ngClass]="{ 'lane-selected': roleId == 'jungle' }"
+      >
+        <label for="jungle">Caçador</label>
+      </button>
+    </form>
+  </div>
+  <div class="lane-info">
+    <img class="lane-image" src="{{ roleImage }}" alt="Role Image" />
+    <p>{{ roleDescription }}</p>
+  </div>
+</article>

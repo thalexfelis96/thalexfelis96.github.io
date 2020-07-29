@@ -1,0 +1,41 @@
+.wrapper {
+  background-color: black;
+  color: aliceblue;
+  padding: 40px;
+  margin-bottom: 50px;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.email-form {
+  background-color: lightgray;
+  border-radius: 10px;
+  width: 300px;
+  height: 40px;
+}
+.email-sent {
+  visibility: hidden;
+}
+.email-success {
+  visibility: visible;
+}
+
+.email-image {
+  max-width: 300px;
+  min-width: 300px;
+  max-height: 300px;
+  min-height: 300px;
+}
+/* .email-image::before {
+  content: url(../../assets/images/mail.svg);
+  opacity: 30%;
+  size: 300px;
+  position: absolute;
+  z-index: 1;
+} */
+.container {
+  display: flex;
+  justify-content: space-around;
+}

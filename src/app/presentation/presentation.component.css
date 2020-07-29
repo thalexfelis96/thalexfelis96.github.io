@@ -1,0 +1,50 @@
+.wrapper {
+  display: flex;
+  padding: 50px 40px;
+  justify-content: space-between;
+}
+.presentation-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.presentation-title {
+  font-size: 30px;
+  max-width: 400px;
+}
+.gray-text {
+  color: gray;
+  font-size: 25px;
+}
+.presentation-text {
+  text-align: justify;
+  line-height: 32px;
+}
+.info-button {
+  background-color: orange;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 16px 32px;
+  transition: all 0.3s ease-in-out;
+  color: white;
+  font-weight: bold;
+  width: 300px;
+}
+.info-button:hover {
+  border: 2px solid orangered;
+  transition: all 0.3s ease-in-out;
+}
+.profile-picture {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  padding-left: 80px;
+}
+.image {
+  width: 100%;
+  max-width: 300px;
+  min-width: 300px;
+  height: 300px;
+}

@@ -1,0 +1,32 @@
+<section class="wrapper">
+  <div class="container">
+    <div class="form-container">
+      <h1>Fale comigo!</h1>
+      <p>
+        Insira seu email abaixo e entraremos em contato o mais rapido possível!
+      </p>
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="email-form"
+          placeholder="seuemail@email.com"
+          required
+          [(ngModel)]="userEmail.email"
+        />
+
+        <p id="user-email" class="email-sent">
+          Seu email foi enviado. Entrarei em contato
+        </p>
+      </form>
+    </div>
+    <div>
+      <img
+        src="../../assets/images/mail.svg"
+        alt="email-image"
+        class="email-image"
+      />
+    </div>
+  </div>
+</section>
