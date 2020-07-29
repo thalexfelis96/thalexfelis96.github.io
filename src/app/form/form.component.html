@@ -13,12 +13,16 @@
           class="email-form"
           placeholder="seuemail@email.com"
           required
+          email
           [(ngModel)]="userEmail.email"
+          #email="ngModel"
         />
-
-        <p id="user-email" class="email-sent">
-          Seu email foi enviado. Entrarei em contato
-        </p>
+        <div *ngIf="!email.valid && email.touched" class="error-message">
+          Email inválido. Por favor insira um email válido!
+        </div>
+        <div *ngIf="email.valid && email.touched" class="success-message">
+          Email enviado. Entrarei em contato em breve!
+        </div>
       </form>
     </div>
     <div>

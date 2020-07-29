@@ -12,10 +12,7 @@ export class FormComponent implements OnInit {
     email: '',
   };
 
-  onSubmit(form) {
-    document.getElementById('user-email').classList.remove('email-sent');
-    document.getElementById('user-email').classList.add('email-success');
-  }
+  onSubmit(form) {}
 
   ngOnInit(): void {}
 }
