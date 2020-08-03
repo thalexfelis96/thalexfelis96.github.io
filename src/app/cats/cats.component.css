@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.cats-images {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cat-image {
+  max-width: 200px;
+  min-width: 200px;
+  max-height: 200px;
+  min-height: 200px;
+  padding: 5px;
+}

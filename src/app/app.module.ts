@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -28,7 +29,13 @@ import { CatsComponent } from './cats/cats.component';
     AppMainPageComponent,
     CatsComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, RouterModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    RouterModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

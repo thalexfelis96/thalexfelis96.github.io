@@ -1,1 +1,14 @@
-<p>cats works!</p>
+<app-card>
+  <div class="container">
+    <h1>Você gosta de gatos?</h1>
+    <div class="cats-images">
+      <img
+        class="cat-image"
+        src="{{ cat.url }}"
+        *ngFor="let cat of catsImages; let i = index"
+        (click)="showId(i)"
+      />
+    </div>
+    <button>Teste</button>
+  </div>
+</app-card>
