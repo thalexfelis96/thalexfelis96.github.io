@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -15,6 +16,8 @@ import { FormComponent } from './form/form.component';
 import { FooterComponent } from './footer/footer.component';
 import { AppMainPageComponent } from './app-main-page/app-main-page.component';
 import { CatsComponent } from './cats/cats.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +31,17 @@ import { CatsComponent } from './cats/cats.component';
     FooterComponent,
     AppMainPageComponent,
     CatsComponent,
+    ModalDialogComponent,
   ],
+  entryComponents: [ModalDialogComponent],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     RouterModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

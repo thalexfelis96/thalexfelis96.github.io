@@ -1,3 +1,5 @@
+import { ModalDialogComponent } from './../modal-dialog/modal-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -12,7 +14,11 @@ export class CatsComponent implements OnInit {
   catsImages: { id: string; url: string }[];
   catsImageId: string[];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, public dialog: MatDialog) {}
+
+  // openDialog() {
+
+  // }
 
   observable(cats) {
     this.catsImages = cats.map((cat) => ({
@@ -21,9 +27,9 @@ export class CatsComponent implements OnInit {
     }));
     console.log(this.catsImages);
   }
-  // getId(id) {
-  //   this.catsImageId = id.map((catid) => catid.id);
-  // }
+
+  // Escolha seu gato favorito.
+
   showId(i) {
     console.log(this.catsImages[i].id);
     const opts = {
@@ -33,7 +39,9 @@ export class CatsComponent implements OnInit {
     };
     this.http
       .post(this.apiURLFav, { image_id: `this.catsImageId[i].id` }, opts)
-      .subscribe((dados) => console.log(dados));
+      .subscribe((dados) => {
+        console.log(dados), this.dialog.open(ModalDialogComponent);
+      });
   }
 
   ngOnInit(): void {
